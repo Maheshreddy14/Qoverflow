@@ -28,7 +28,7 @@ interface Props{
 
 
 const Question = ({mongoUserId}:Props) => {
-  //const EditorApiKey=process.env.TINY_MCE_API_KEY ||'your tiny mce api key'
+  const EditorApiKey=process.env.TINY_MCE_API_KEY ||'your tiny mce api key'
   const [isSubmitting, setIsSubmitting] = useState(false);
   const type:any='create'
   const router=useRouter()
@@ -118,7 +118,7 @@ const Question = ({mongoUserId}:Props) => {
               <FormLabel className="paragraph-semibold text-dark400_light800">Explanation<span className="text-primary-500">*</span></FormLabel>
               <FormControl className="mt-3.5">
                 <Editor
-                  apiKey='yt720z6a8xu0moe635ce6xjqonk745ufirbizft3xybo0naw'
+                  apiKey={EditorApiKey}
                   onBlur={field.onBlur}
                   onEditorChange={(content) => field.onChange(content)}
                   initialValue=''
