@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import React from 'react'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Inter, Space_Grotesk } from 'next/font/google'
@@ -48,6 +49,7 @@ export default function RootLayout({
               {children}
             </ThemeProvider>
           </ClerkProvider>
+          <SpeedInsights />
         </body>
       </html>
   )
